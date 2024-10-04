@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+body {
+  font-size: 1rem;
+  color: green;
+  font-family: "Noto Serif KR", system-ui;
+  /* font-family: "Pretendard Variable", Pretendard, sans-serif; */
+}
