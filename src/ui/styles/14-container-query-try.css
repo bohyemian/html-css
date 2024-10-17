@@ -1,0 +1,72 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+h1,
+p {
+  line-height: 1.5;
+}
+
+h1 {
+  margin-block: 1rem;
+}
+
+p:not(.card__description) {
+  margin-block: 1rem;
+}
+
+/* 카드 컴포넌트 */
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gray);
+
+  .card__image {
+    flex: 1;
+  }
+
+  .card__caption {
+    text-align: center;
+
+    a {
+      color: inherit;
+      font-style: italic;
+      text-decoration:none;
+    }
+  }
+
+  .card__description {
+    flex: 2;
+  }
+}
+
+/* 카드 레이아웃 */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .cards {
+    flex-direction: row;
+    flex: 1;
+  }
+}
+.card-wrapper {
+  container-type: inline-size;
+  display: flex;
+  flex: 1;
+
+  @container (inline-size < 25vw) {
+    .card {
+      flex-direction: column;
+    }
+  }
+}
+
+.card-floating {
+  .card-wrapper {
+    float: left;
+    inline-size: 50%;
+    margin-inline-end: 1rem;
+  }
+}
